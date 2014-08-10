@@ -21,6 +21,7 @@ while running do
             else
                 users[pseudo] = {ip=msg_or_ip, port=port_or_nil}
                 udp:sendto(string.format("%s %s", pseudo, 'yes'), msg_or_ip,  port_or_nil)
+                -- udp:sendto(string.format("%s %s %s", pseudo, 'enters', message), v.ip,  v.port)
             end
         elseif action == 'says' then
             for k, v in pairs(users) do
